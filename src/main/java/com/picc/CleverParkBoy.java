@@ -3,8 +3,8 @@ package com.picc;
 
 public class CleverParkBoy extends ParkBoy {
 
-    public CleverParkBoy(ParkLot parkLotFirst, ParkLot parkLotSecond) {
-        super(parkLotFirst, parkLotSecond);
+    public CleverParkBoy(ParkLot... parklots) {
+        super(parklots);
     }
 
     @Override
