@@ -13,7 +13,7 @@ public class ParkLot {
 
     public ParkTicket parkingCar(Car car) {
         ParkTicket parkTicket = new ParkTicket();
-        if (this.capatity == carMap.size()) throw new ArrayIndexOutOfBoundsException("parking lot is full");
+        if (isfull()) throw new ArrayIndexOutOfBoundsException("parking lot is full");
         carMap.put(parkTicket, car);
         return parkTicket;
     }
@@ -46,5 +46,9 @@ public class ParkLot {
 
     public double getVacancyRate() {
         return 1 - carMap.size() / capatity;
+    }
+
+    public int getSetNumber() {
+        return carMap.size();
     }
 }
